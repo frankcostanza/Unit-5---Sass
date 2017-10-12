@@ -1,0 +1,341 @@
+@import 'variables/index';
+@import 'base/index';
+@import 'mixin/index';
+
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+p {
+
+	margin:0;
+}
+
+
+li {
+	list-style: none;
+}
+
+.wrapper {			
+	width:90%;
+	margin: 0 auto;
+	min-width: 300px;
+}
+
+/*-----HEADER------*/
+
+.student {
+	font-size: 2em;
+	font-weight: bolder;
+	@media (min-width: 768px) {
+		display: inline;	
+	}
+}
+
+
+ul {
+	padding-left: 0px;
+}
+
+header {
+	background-color: $primary-color;
+	padding-top: 10px;
+}
+
+
+%center-margin {
+
+	margin-left: auto; /*centers the profile image*/
+    margin-right: auto;
+}
+
+
+
+ul {
+
+	li {
+		@extend %center-margin;
+	    width:90%;
+		text-align: center;
+		font-family: 'PT Sans', sans-serif;
+		background-color: $white;
+		margin-bottom: 4px;
+		padding:10px 0px;
+	    @include font;
+	    @media (min-width: 768px) {
+			display: inline;
+			padding-right: 25px;
+			background-color: $primary-color;
+			@include font;
+			padding-left: 25px;
+			margin-right: 10px;	
+		}
+	}
+}
+
+
+.profile-img {
+	@extend %center-margin;
+	width: 80%;
+	display: block;
+	 @media (min-width: 768px) {
+		float:right;
+		width: 40%;
+		margin-right: 30px;
+		margin-bottom:50px;
+		padding-left: 50px;
+
+	}
+   
+}
+
+.description {
+	padding:20px 2% 40px 2%;
+	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0.05em;
+	@include font;
+	line-height: 1.3em;
+	@media (min-width: 768px) {
+		text-align: left;
+		line-height: 1.5em;
+		padding-right: 20px;
+		padding-top: 0;
+	}
+}
+
+/*------NAVIGATION----*/
+
+.navigation {
+	@media (min-width: 768px) {
+		text-align:center;
+	}
+	@media (min-width: 1024px) {
+		text-align:left;
+		width:100%;
+		padding-left: 20px;
+	}
+}
+
+.profile {
+	@media (min-width: 768px) {
+		padding-top: 30px;
+	}
+}
+
+.navigation-list {
+@media (min-width: 1024px) {
+
+		display:inline;
+		float:right;
+
+	}
+}
+
+
+/*------MAINCONTENT----*/
+.main-content {
+	@media (min-width: 768px) {
+		overflow: hidden;
+	}
+}
+
+.content-box:nth-child(2n-1) {
+	@media (min-width: 768px) {
+		clear:left;
+	}
+}
+
+.content-box {
+	@media (min-width: 768px) {
+		float:left;
+		width: 50%;
+		padding-right: 10px;
+	}
+}
+
+.phone {
+	@media (min-width: 768px) {
+		padding-bottom: 20px;
+	}
+}
+
+
+
+.name-tablet {
+	@media (min-width: 768px)  {
+		margin-right: 230px;
+		font-weight: bold;
+		font-size: 0.85em;
+		float:left;
+	}
+}
+
+.last-main {
+	@media (min-width: 768px)  {
+		float:right;
+		padding-left: 0;
+	}
+}
+		
+
+
+.last-tablet {
+	@media (min-width: 768px)  {
+		display: inline-block;
+		padding-left: 20px;
+		font-weight: bold;
+		font-size: 0.85em
+	}
+}
+
+.student {
+	@media (min-width: 1024px) {
+		text-align:left;
+		float:left;
+		margin-left: auto;
+	}
+}
+
+.list-item {
+	@media (min-width: 1024px) {
+		display: inline;
+	}
+}
+
+
+.content-box {
+	@media (min-width: 1024px) {
+		float:left;
+		width: 33%;
+		padding-right: 10px;
+	}
+}
+
+
+.content-box:nth-child(n) {
+	@media (min-width: 1024px) {
+		clear:none;
+	}
+}
+
+.profile {
+@media (min-width: 1024px) {
+		clear:both;
+	}
+}
+
+/*------LINKS-------*/
+
+
+
+a {
+	&:link {
+	@extend %link-style;
+	}
+
+	&:visited {
+	@extend %link-style;
+	}
+
+	&:hover {
+	color:red;
+	}
+}
+
+
+/*------IMAGES-------*/
+
+img {					/*skaliert die Bilder je Bildschirmgröße*/
+	width: 100%;  
+	height: auto;
+}
+
+.image {
+
+	margin-top: 20px;
+}
+
+
+/*FOOTER*/
+
+
+.footer {
+	text-align: center;
+	background-color:$primary-color;
+	padding: 3%;
+	margin-top: 30px;
+	overflow: hidden;
+	@media (min-width: 768px) {
+		margin-top: 40px;
+	}
+}
+
+
+.lowest-content-mobile {
+	
+	border-top: 1px solid $lightgrey;
+	margin-top: 20px;
+	padding-top: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+
+.name {
+	float: left;
+}
+
+.last {
+	float: right;
+}
+
+.footer-text {
+	padding:30px;
+}
+
+.lowest-content-tablet {
+	display: none;
+	@media (min-width: 768px) {
+		display: inline-block;
+		width:100%;
+		margin:30px 30px 30px 0;
+		border-top: 1px solid $lightgrey;
+		padding-top: 20px;
+	}
+}
+
+.main-header {
+	background-color: $burlywood;
+	@media (min-width: 768px) {
+		overflow:hidden;
+	}
+}
+
+
+
+
+
+/*-----TYPOGRAPHIE----*/
+
+/*googlefonts
+font-family: 'Open Sans', sans-serif;
+font-family: 'PT Sans', sans-serif;
+*/
+
+h1, h2, p {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.3em;
+}
+
+.content-box p {
+	color: #696969;
+	font-family: 'PT Sans', sans-serif;
+}
