@@ -1,0 +1,13 @@
+a {
+	&:link {
+	@extend %link-style;
+	}
+
+	&:visited {
+	@extend %link-style;
+	}
+
+	&:hover {
+	color:$red;
+	}
+}

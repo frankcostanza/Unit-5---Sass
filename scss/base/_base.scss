@@ -1,3 +1,29 @@
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+p {
+
+	margin:0;
+}
+
+
+li {
+	list-style: none;
+}
+
+.wrapper {			
+	width:90%;
+	margin: 0 auto;
+	min-width: 300px;
+}
+
+
+
+
 %center-margin {
 
 	margin-left: auto; /*centers the profile image*/
@@ -9,3 +35,27 @@
  	text-style: none;
  }
 
+.content-box {
+	@media (min-width: $break-m) {
+		float:left;
+		width: 50%;
+		padding-right: 10px;
+	}
+}
+
+.phone {
+	@media (min-width:break-m) {
+		padding-bottom: 20px;
+	}
+}
+
+
+
+.name-tablet {
+	@media (min-width: $break-m)  {
+		margin-right: 230px;
+		font-weight: bold;
+		font-size: 0.85em;
+		float:left;
+	}
+}
